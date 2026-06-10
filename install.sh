@@ -133,7 +133,8 @@ echo "💡 You should install it if you want this verification."
 echo "🐧 In Fedora: sudo dnf install httpd-tools"
 fi
 
-
+# Install aws cli if missing so VPC reuse can be validated.
+sudo dnf -y install awscli
 
 # Check that the aws cli is installed if you want to reuse the VPC.
 if ! command -v aws &>/dev/null && [[ ${REUSE_AWS_VPC} =~ ^([Tt]rue|[Yy]es|[1])$ ]]; then
