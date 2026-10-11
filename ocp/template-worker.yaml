@@ -1,7 +1,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 metadata: 
-  name: gpu-worker
+  name: worker
 objects:
   - apiVersion: machine.openshift.io/v1beta1
     kind: MachineSet
